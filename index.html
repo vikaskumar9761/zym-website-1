@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>PTHK | Personal Trainers Hong Kong - Elite Fitness & Coaching Network</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Personal Trainers Hong Kong (@personaltrainershk) is the premier network of certified personal trainers, sports coaches, and boutique fitness studios across Central, Wan Chai, TST, and Mid-Levels.">
+  <meta name="keywords" content="personal trainers hong kong, PTHK, @personaltrainershk, gym trainers HK, personal training central, fitness coach hong kong, fat loss trainer HK, private gym coaching">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PTHK | Personal Trainers Hong Kong - Elite Fitness Coaching">
+  <meta property="og:description" content="Match with Hong Kong's top 1% certified personal coaches. Custom strength, fat loss, and rehab protocols.">
+  <meta property="og:image" content="assets/images/hero-bg.jpg">
+  
+  <!-- Google Fonts: Teko (Athletic Impact Display) + Outfit (Modern Luxury Body) + Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+  
+  <!-- Core Design Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo">
+        <div class="logo-icon-badge">PT</div>
+        <div class="logo-text-group">
+          <span class="brand-name">PTHK</span>
+          <span class="brand-sub">Hong Kong</span>
+        </div>
+      </a>
+
+      <!-- Primary Nav Links (Slideout on Mobile) -->
+      <nav class="primary-nav" id="primary-nav">
+        <a href="#trainers-section">Find a Trainer</a>
+        <a href="#quiz-section">Matchmaker Quiz</a>
+        <a href="#programs-section">Programs</a>
+        <a href="#transformations-section">Transformations</a>
+        <a href="#calculators-section">Body Calculators</a>
+        <a href="#network-section">Trainer Network</a>
+        <a href="#faq-section">FAQ</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="currency-toggle" id="currency-toggle-btn" title="Toggle Currency (HKD / USD)">HKD</button>
+        <button class="btn btn-primary btn-sm" onclick="openBookingModal()">
+          <i class="ri-calendar-check-line"></i> Book Assessment
+        </button>
+        <button class="mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle Mobile Navigation">
+          <i class="ri-menu-4-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <img src="assets/images/hero-bg.jpg" alt="Personal Trainers Hong Kong Elite Gym Studio" class="hero-bg-img">
+
+    <div class="container hero-grid">
+      <!-- Left Hero Content -->
+      <div class="hero-content reveal">
+        <div class="hero-pill">
+          <span class="pulse-dot"></span>
+          <span>Hong Kong's #1 Certified Fitness Network</span>
+        </div>
+
+        <h1 class="hero-title">
+          Elevate Your Body With <span class="gradient-text">Hong Kong's Top 1%</span> Personal Coaches
+        </h1>
+
+        <p class="hero-desc">
+          Connect with vetted, elite personal trainers and specialist fitness studios across Central, Wan Chai, TST, and Mid-Levels. Precision 1-on-1 coaching, tailored metabolic nutrition, and guaranteed physical transformation.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#quiz-section" class="btn btn-primary btn-lg">
+            <i class="ri-sparkling-fill"></i> Find My Match (30s Quiz)
+          </a>
+          <a href="#trainers-section" class="btn btn-secondary btn-lg">
+            <i class="ri-search-line"></i> Explore All Trainers
+          </a>
+        </div>
+
+        <!-- Social Proof Bar -->
+        <div class="hero-trust-bar">
+          <div class="avatar-stack">
+            <img src="assets/images/trainer-marcus.jpg" alt="Coach Marcus">
+            <img src="assets/images/trainer-sarah.jpg" alt="Coach Sarah">
+            <img src="assets/images/trainer-alex.jpg" alt="Coach Alex">
+            <img src="assets/images/trainer-kenji.jpg" alt="Coach Kenji">
+          </div>
+          <div class="trust-rating-text">
+            <div><span class="stars">★★★★★</span> <strong>4.98 / 5.0 Rating</strong></div>
+            <span style="color: var(--text-secondary); font-size: 0.8rem;">Trusted by 950+ HK executives & athletes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Quick Match Card -->
+      <div class="hero-quick-match-card reveal delay-1">
+        <h3 class="match-box-title">Instant Coach Match</h3>
+        <p class="match-box-desc">Tell us your goal and area — get connected to certified specialists immediately.</p>
+
+        <form id="hero-quick-match-form" onsubmit="event.preventDefault(); window.location.href='#quiz-section';">
+          <div class="form-group">
+            <label class="form-label">Primary Fitness Goal</label>
+            <select class="form-select" id="quick-goal">
+              <option value="fatloss">Aggressive Fat Loss & Metabolic Tone</option>
+              <option value="strength">Hypertrophy, Muscle Mass & Heavy Lifts</option>
+              <option value="boxing">Boxing, Combat & HIIT Conditioning</option>
+              <option value="rehab">Postural Correction & Sports Pain Rehab</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Preferred HK Location</label>
+            <select class="form-select" id="quick-location">
+              <option value="central">Central / Soho Flagship</option>
+              <option value="wanchai">Wan Chai / Causeway Bay</option>
+              <option value="tst">Tsim Sha Tsui (Kowloon)</option>
+              <option value="midlevels">Mid-Levels / Private In-Home</option>
+              <option value="online">Hybrid / Remote App Coaching</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Coaching Format</label>
+            <select class="form-select" id="quick-format">
+              <option value="1on1">Private 1-on-1 Elite Sessions</option>
+              <option value="semi">Semi-Private / Duo Coaching</option>
+              <option value="corporate">Executive Corporate Wellness</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="ri-user-star-line"></i> Match Me With Available Coaches
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LIVE STATS COUNTER STRIP
+       ========================================================================== -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box reveal">
+          <div class="stat-number-wrap">
+            <span class="counter-val" data-target="950">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Hong Kong Clients Transformed</span>
+        </div>
+
+        <div class="stat-box reveal delay-1">
+          <div class="stat-number-wrap">
+            <span class="counter-val" data-target="50">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Vetted Certified Coaches</span>
+        </div>
+
+        <div class="stat-box reveal delay-2">
+          <div class="stat-number-wrap">
+            <span class="counter-val" data-target="98.4" data-decimal="true">0</span><span class="stat-suffix">%</span>
+          </div>
+          <span class="stat-label">Goal Completion Success Rate</span>
+        </div>
+
+        <div class="stat-box reveal delay-3">
+          <div class="stat-number-wrap">
+            <span class="counter-val" data-target="4.98" data-decimal="true">0</span><span class="stat-suffix">★</span>
+          </div>
+          <span class="stat-label">Average Verified Client Score</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TRAINER MATCHMAKER QUIZ SECTION
+       ========================================================================== -->
+  <section class="quiz-section" id="quiz-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="ri-cpu-line"></i> Smart Matching Protocol</span>
+        <h2 class="section-title">Find Your Perfect <span class="gradient-text">Hong Kong Coach</span></h2>
+        <p class="section-desc">Take our 30-second assessment to get matched with a coach specialized in your exact body type, training style, and schedule.</p>
+      </div>
+
+      <div class="quiz-wrapper-box reveal delay-1" id="quiz-widget">
+        <!-- Progress Bar -->
+        <div class="quiz-progress-bar-container">
+          <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+        </div>
+
+        <div class="quiz-header-row">
+          <span class="badge-tag" id="quiz-step-indicator" style="color: var(--primary-orange); font-weight: 800;">Step 1 of 3</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="ri-lock-line"></i> 100% Free & Confidential</span>
+        </div>
+
+        <div id="quiz-steps-wrapper">
+          <!-- STEP 1: GOAL -->
+          <div class="quiz-step active" data-step="1">
+            <h3 class="quiz-step-title">What is your primary fitness objective?</h3>
+            <p class="quiz-step-desc">Select the transformation milestone you want to achieve in the next 90 days.</p>
+            
+            <div class="quiz-options-grid">
+              <button type="button" class="quiz-option-btn selected" data-field="goal" data-val="fatloss">
+                <i class="ri-fire-fill"></i>
+                <span class="opt-title">Rapid Fat Loss & Shred</span>
+                <span class="opt-desc">Burn stubborn body fat while keeping lean muscle tone.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="goal" data-val="strength">
+                <i class="ri-weight-fill"></i>
+                <span class="opt-title">Hypertrophy & Heavy Lifts</span>
+                <span class="opt-desc">Build substantial muscle mass and max athletic strength.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="goal" data-val="boxing">
+                <i class="ri-boxing-fill"></i>
+                <span class="opt-title">Boxing & Fight Conditioning</span>
+                <span class="opt-desc">Explosive combat padwork, speed, and high-calorie burn.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="goal" data-val="rehab">
+                <i class="ri-heart-pulse-fill"></i>
+                <span class="opt-title">Postural Reset & Spine Rehab</span>
+                <span class="opt-desc">Eradicate desk-bound back/neck pain and restore mobility.</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: LOCATION -->
+          <div class="quiz-step" data-step="2">
+            <h3 class="quiz-step-title">Where do you prefer to train in Hong Kong?</h3>
+            <p class="quiz-step-desc">Select the most convenient district for your weekly coaching sessions.</p>
+            
+            <div class="quiz-options-grid">
+              <button type="button" class="quiz-option-btn selected" data-field="location" data-val="Central">
+                <i class="ri-building-4-fill"></i>
+                <span class="opt-title">Central & Soho</span>
+                <span class="opt-desc">Premium private boutique facilities near IFC and Lan Kwai Fong.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="location" data-val="Wan Chai">
+                <i class="ri-building-2-fill"></i>
+                <span class="opt-title">Wan Chai & Causeway Bay</span>
+                <span class="opt-desc">Modern high-performance studio hubs on HK Island.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="location" data-val="Tsim Sha Tsui">
+                <i class="ri-map-pin-user-fill"></i>
+                <span class="opt-title">Tsim Sha Tsui (Kowloon)</span>
+                <span class="opt-desc">Convenient Kowloon waterfront partner gyms.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="location" data-val="Mid-Levels">
+                <i class="ri-home-wifi-fill"></i>
+                <span class="opt-title">Mid-Levels / Private In-Home</span>
+                <span class="opt-desc">Coach travels to your residential clubhouse or private studio.</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3: COACHING STYLE -->
+          <div class="quiz-step" data-step="3">
+            <h3 class="quiz-step-title">What coaching style produces your best results?</h3>
+            <p class="quiz-step-desc">Choose how you like your coach to keep you accountable.</p>
+            
+            <div class="quiz-options-grid">
+              <button type="button" class="quiz-option-btn selected" data-field="style" data-val="structured">
+                <i class="ri-compass-3-fill"></i>
+                <span class="opt-title">Data-Driven & Structured</span>
+                <span class="opt-desc">Detailed weekly metric tracking, biomechanics, and exact macros.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="style" data-val="intense">
+                <i class="ri-flashlight-fill"></i>
+                <span class="opt-title">High Energy & Motivational</span>
+                <span class="opt-desc">Pushes your intensity limits every single workout.</span>
+              </button>
+
+              <button type="button" class="quiz-option-btn" data-field="style" data-val="rehab">
+                <i class="ri-mental-health-fill"></i>
+                <span class="opt-title">Holistic & Injury-Conscious</span>
+                <span class="opt-desc">Safety first, joint longevity, and sustainable habit formation.</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls Row -->
+        <div class="quiz-controls-row" id="quiz-controls">
+          <button type="button" class="btn btn-secondary" id="quiz-prev-btn" style="display: none;">
+            <i class="ri-arrow-left-line"></i> Back
+          </button>
+          <div style="flex-grow: 1;"></div>
+          <button type="button" class="btn btn-primary" id="quiz-next-btn">
+            <span>Next Step</span> <i class="ri-arrow-right-line"></i>
+          </button>
+        </div>
+
+        <!-- Result Container -->
+        <div id="quiz-result-container" style="display: none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FILTERABLE TRAINER DIRECTORY
+       ========================================================================== -->
+  <section class="trainers-section" id="trainers-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="ri-shield-star-fill"></i> Verified Vetted Talent</span>
+        <h2 class="section-title">Hong Kong's <span class="gradient-text">Certified Coaches</span></h2>
+        <p class="section-desc">Browse internationally certified personal trainers holding CSCS, NASM, ACE, and EXOS credentials.</p>
+      </div>
+
+      <!-- Directory Filters -->
+      <div class="directory-toolbar reveal delay-1">
+        <div class="filters-group">
+          <button class="trainer-filter-btn active" data-discipline="all">All Specialties</button>
+          <button class="trainer-filter-btn" data-discipline="strength">Strength & Hypertrophy</button>
+          <button class="trainer-filter-btn" data-discipline="fatloss">Fat Loss & Conditioning</button>
+          <button class="trainer-filter-btn" data-discipline="boxing">Boxing & Combat</button>
+          <button class="trainer-filter-btn" data-discipline="rehab">Posture & Sports Rehab</button>
+        </div>
+
+        <div class="location-filter-wrap">
+          <label for="trainer-location-select"><i class="ri-map-pin-line"></i> District:</label>
+          <select id="trainer-location-select" class="form-select" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+            <option value="all">All HK Locations</option>
+            <option value="Central">Central</option>
+            <option value="Wan Chai">Wan Chai</option>
+            <option value="Tsim Sha Tsui">Tsim Sha Tsui</option>
+            <option value="Causeway Bay">Causeway Bay</option>
+            <option value="Mid-Levels">Mid-Levels</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Trainers Grid (Filled dynamically by app.js) -->
+      <div class="trainers-grid" id="trainers-grid">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BEFORE & AFTER TRANSFORMATION SHOWCASE (INTERACTIVE SLIDER)
+       ========================================================================== -->
+  <section class="transformation-section" id="transformations-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="ri-sparkling-2-line"></i> Undeniable Proof</span>
+        <h2 class="section-title">Real Clients. <span class="gradient-text">Real Metamorphosis.</span></h2>
+        <p class="section-desc">Drag the interactive slider to view before and after results from our structured 12-week protocols.</p>
+      </div>
+
+      <div class="transformation-grid">
+        <!-- Drag & Slide Comparison Component -->
+        <div class="slider-comparison-box reveal" id="transformation-slider-container">
+          <!-- Background: AFTER image -->
+          <img src="assets/images/transformation-split.jpg" alt="After Transformation - 8% Body Fat Athlete" class="slider-img">
+          
+          <!-- Foreground: BEFORE image (clipped width) -->
+          <div class="slider-before-wrapper" id="slider-before-wrapper">
+            <img src="assets/images/transformation-split.jpg" alt="Before Transformation - 26% Body Fat" class="slider-img">
+          </div>
+
+          <!-- Draggable Handle -->
+          <div class="slider-handle" id="slider-handle">
+            <i class="ri-arrow-left-right-line"></i>
+          </div>
+        </div>
+
+        <!-- Transformation Case Details -->
+        <div class="transformation-stats-card reveal delay-1">
+          <span class="section-tag" style="background: rgba(0, 229, 153, 0.12); color: var(--accent-emerald); border-color: rgba(0, 229, 153, 0.3);">
+            <i class="ri-checkbox-circle-fill"></i> Verified Case Study #148
+          </span>
+
+          <h3 style="font-size: 1.6rem; margin: 0.5rem 0 0.25rem;">David W. (Managing Director, Central)</h3>
+          <p style="color: var(--primary-orange); font-weight: 700; font-size: 0.9rem;">Coached by Marcus Vance • 16-Week Metamorphosis</p>
+
+          <div class="transformation-metrics-grid">
+            <div class="t-metric-box">
+              <span class="t-metric-val">-14.2 kg</span>
+              <span class="t-metric-lbl">Pure Body Fat Lost</span>
+            </div>
+            <div class="t-metric-box">
+              <span class="t-metric-val">26% → 8%</span>
+              <span class="t-metric-lbl">Body Fat Recomp</span>
+            </div>
+            <div class="t-metric-box">
+              <span class="t-metric-val">+4.5 kg</span>
+              <span class="t-metric-lbl">Lean Muscle Mass</span>
+            </div>
+          </div>
+
+          <p class="transformation-quote">
+            "Working 70+ hour weeks in Central investment banking ruined my physical health. PTHK paired me with Marcus who built a hyper-efficient 45-minute strength plan around my crazy schedule. I'm leaner and more energized at 41 than in my twenties."
+          </p>
+
+          <button class="btn btn-primary btn-block" onclick="openBookingModal()">
+            <i class="ri-fire-line"></i> Claim Your Custom Transformation Plan
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FITNESS & BODY ASSESSMENT TOOLKIT (CALCULATORS)
+       ========================================================================== -->
+  <section class="calculators-section" id="calculators-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="ri-calculator-line"></i> Precision Science</span>
+        <h2 class="section-title">Body Assessment & <span class="gradient-text">Metabolic Toolkit</span></h2>
+        <p class="section-desc">Calculate your BMI, Daily Caloric & Macronutrient breakdown, and 1-Rep Max load capabilities instantly.</p>
+      </div>
+
+      <!-- Calculator Tabs Navigation -->
+      <div class="calc-tabs-nav reveal delay-1">
+        <button class="calc-tab-btn active" data-tab="calc-bmi">
+          <i class="ri-dashboard-3-line"></i> BMI & Body Fat Range
+        </button>
+        <button class="calc-tab-btn" data-tab="calc-macro">
+          <i class="ri-restaurant-2-line"></i> TDEE & Macronutrient Splits
+        </button>
+        <button class="calc-tab-btn" data-tab="calc-onerm">
+          <i class="ri-weights-line"></i> 1-Rep Max Strength Estimator
+        </button>
+      </div>
+
+      <!-- 1. BMI CALCULATOR PANEL -->
+      <div class="calc-panel active" id="calc-bmi">
+        <div class="calc-layout-grid">
+          <form id="bmi-form" onsubmit="event.preventDefault();">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Enter Your Body Stats</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="bmi-height">Height (cm)</label>
+                <input type="number" id="bmi-height" class="form-input" value="175" min="120" max="230">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bmi-weight">Weight (kg)</label>
+                <input type="number" id="bmi-weight" class="form-input" value="78" min="30" max="200">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="bmi-age">Age</label>
+                <input type="number" id="bmi-age" class="form-input" value="32" min="16" max="90">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bmi-gender">Biological Sex</label>
+                <select id="bmi-gender" class="form-select">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+
+            <p style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.5rem;">
+              <i class="ri-information-line"></i> BMI provides an initial biometric reference. In-person PTHK assessments include 8-point bioimpedance & caliper DEXA-equivalency.
+            </p>
+          </form>
+
+          <!-- BMI Results Output -->
+          <div class="calc-results-card">
+            <span style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700;">Calculated BMI Score</span>
+            <div class="big-metric-num" id="bmi-value">25.5</div>
+            <div id="bmi-category-badge" class="metric-badge status-amber">Overweight / Muscular</div>
+
+            <!-- Gauge visual -->
+            <div class="bmi-gauge-track">
+              <div class="bmi-gauge-pointer" id="bmi-gauge-pointer"></div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem;">
+              <span>Under (&lt;18.5)</span>
+              <span>Athletic (18.5-24.9)</span>
+              <span>Over (25-29.9)</span>
+              <span>Obese (30+)</span>
+            </div>
+
+            <p id="bmi-advice-text" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+              Target steady fat loss through moderate caloric deficit and structured resistance training.
+            </p>
+
+            <div style="background: var(--bg-surface); padding: 0.85rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.85rem;">
+              Ideal Weight Baseline: <strong id="bmi-healthy-range" style="color: var(--accent-emerald);">56.7 kg - 76.3 kg</strong>
+            </div>
+
+            <a href="#" id="bmi-whatsapp-share" target="_blank" class="btn btn-whatsapp btn-block btn-sm">
+              <i class="ri-whatsapp-line"></i> Send My Stats to Head Coach
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. MACRONUTRIENTS & TDEE PANEL -->
+      <div class="calc-panel" id="calc-macro">
+        <div class="calc-layout-grid">
+          <form id="macro-form" onsubmit="event.preventDefault();">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Metabolic Parameters</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="macro-age">Age</label>
+                <input type="number" id="macro-age" class="form-input" value="30">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="macro-gender">Gender</label>
+                <select id="macro-gender" class="form-select">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="macro-height">Height (cm)</label>
+                <input type="number" id="macro-height" class="form-input" value="175">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="macro-weight">Weight (kg)</label>
+                <input type="number" id="macro-weight" class="form-input" value="75">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="macro-activity">Weekly Activity Level</label>
+              <select id="macro-activity" class="form-select">
+                <option value="1.2">Sedentary (Desk job, little exercise)</option>
+                <option value="1.375">Lightly Active (1-3 gym sessions/wk)</option>
+                <option value="1.55" selected>Moderately Active (3-5 intense workouts/wk)</option>
+                <option value="1.725">Very Active (6-7 intense sessions/wk)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="macro-goal">Transformation Target</label>
+              <select id="macro-goal" class="form-select">
+                <option value="cut" selected>Aggressive Fat Loss (-20% Caloric Deficit)</option>
+                <option value="recomp">Body Recomposition / Maintenance</option>
+                <option value="bulk">Lean Hypertrophy Muscle Surplus (+15%)</option>
+              </select>
+            </div>
+          </form>
+
+          <!-- Macro Results -->
+          <div class="calc-results-card">
+            <span style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Target Daily Calories</span>
+            <div class="big-metric-num" id="macro-calories-val" style="color: var(--primary-orange);">2,150 kcal</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Maintenance TDEE: <span id="macro-tdee-val">2,680 kcal</span></p>
+
+            <div class="macro-split-grid">
+              <div class="macro-box">
+                <span class="macro-grams" id="macro-protein-val">165g</span>
+                <span class="macro-name">Protein (4 kcal/g)</span>
+              </div>
+              <div class="macro-box">
+                <span class="macro-grams" id="macro-carbs-val">210g</span>
+                <span class="macro-name">Carbs (4 kcal/g)</span>
+              </div>
+              <div class="macro-box">
+                <span class="macro-grams" id="macro-fats-val">60g</span>
+                <span class="macro-name">Fats (9 kcal/g)</span>
+              </div>
+            </div>
+
+            <a href="#" id="macro-whatsapp-share" target="_blank" class="btn btn-whatsapp btn-block btn-sm">
+              <i class="ri-whatsapp-line"></i> WhatsApp Me My Custom Meal Plan
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 1-REP MAX PANEL -->
+      <div class="calc-panel" id="calc-onerm">
+        <div class="calc-layout-grid">
+          <div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 1.25rem;">Strength Input</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">
+              Calculate your theoretical 1-Rep Maximum (1RM) based on submaximal resistance repetitions.
+            </p>
+
+            <div class="form-group">
+              <label class="form-label" for="onerm-weight">Weight Lifted (kg)</label>
+              <input type="number" id="onerm-weight" class="form-input" value="100" min="10" max="400">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="onerm-reps">Repetitions Performed (to failure)</label>
+              <input type="number" id="onerm-reps" class="form-input" value="5" min="1" max="15">
+            </div>
+          </div>
+
+          <div class="calc-results-card">
+            <span style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700;">Estimated 1-Rep Max</span>
+            <div class="big-metric-num" id="onerm-val" style="color: var(--accent-emerald);">117 kg</div>
+
+            <div class="onerm-rows-list" id="onerm-breakdown-body">
+              <!-- Rendered by calculators.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SIGNATURE PROGRAMS & PACKAGES
+       ========================================================================== -->
+  <section class="programs-section" id="programs-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="ri-vip-crown-line"></i> Tailored Protocols</span>
+        <h2 class="section-title">Signature <span class="gradient-text">Coaching Pathways</span></h2>
+        <p class="section-desc">Structured, periodized programs designed for accelerated body recomposition and peak performance.</p>
+      </div>
+
+      <div class="programs-grid">
+        <!-- Program 1 -->
+        <div class="program-card reveal">
+          <span class="program-badge">Rapid Results</span>
+          <h3 class="program-title">Executive Rapid Shred</h3>
+          <p class="program-target">Time-crunched finance & tech leaders wanting fast fat loss.</p>
+          
+          <div class="program-price-wrap">
+            <span class="program-price-tag" data-hkd="23,800 HKD" data-usd="$3,050 USD">23,800 HKD</span>
+            <span class="program-duration">8 Weeks • 24 Private Sessions</span>
+          </div>
+
+          <ul class="program-features-list">
+            <li><i class="ri-check-line"></i> 3x Weekly 45-Min High Density Training</li>
+            <li><i class="ri-check-line"></i> HK Dining Out & Social Survival Guide</li>
+            <li><i class="ri-check-line"></i> Cortisol & Sleep Optimization Plan</li>
+            <li><i class="ri-check-line"></i> 24/7 WhatsApp Coach Direct Line</li>
+          </ul>
+
+          <button class="btn btn-secondary btn-block" onclick="openBookingModal()">Select Pathway</button>
+        </div>
+
+        <!-- Program 2 (Featured) -->
+        <div class="program-card featured reveal delay-1">
+          <span class="program-badge" style="background: var(--primary-orange); color: #FFFFFF;">Most Popular</span>
+          <h3 class="program-title">12-Week Metamorphosis</h3>
+          <p class="program-target">Complete aesthetic body redesign & maximum hypertrophy.</p>
+          
+          <div class="program-price-wrap">
+            <span class="program-price-tag" data-hkd="34,200 HKD" data-usd="$4,380 USD" style="color: var(--primary-orange);">34,200 HKD</span>
+            <span class="program-duration">12 Weeks • 36 Elite Sessions</span>
+          </div>
+
+          <ul class="program-features-list">
+            <li><i class="ri-check-line"></i> 3x Weekly 1-on-1 Gym Mastery Coaching</li>
+            <li><i class="ri-check-line"></i> Bi-Weekly DEXA / 3D Biomechanics Scan</li>
+            <li><i class="ri-check-line"></i> Chef-Grade Tailored Metabolic Meal Plan</li>
+            <li><i class="ri-check-line"></i> VIP Partner Boutique Gym Access Passes</li>
+            <li><i class="ri-check-line"></i> Guaranteed Body Composition Transformation</li>
+          </ul>
+
+          <button class="btn btn-primary btn-block" onclick="openBookingModal()">Start Transformation</button>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="program-card reveal delay-2">
+          <span class="program-badge">Longevity</span>
+          <h3 class="program-title">Postural Reset & Rehab</h3>
+          <p class="program-target">Joint decompression, pain eradication & functional mobility.</p>
+          
+          <div class="program-price-wrap">
+            <span class="program-price-tag" data-hkd="22,500 HKD" data-usd="$2,880 USD">22,500 HKD</span>
+            <span class="program-duration">10 Weeks • 20 Corrective Sessions</span>
+          </div>
+
+          <ul class="program-features-list">
+            <li><i class="ri-check-line"></i> Functional Movement Screen (FMS) Diagnostic</li>
+            <li><i class="ri-check-line"></i> Neck & Lumbar Disc Pain Eradication</li>
+            <li><i class="ri-check-line"></i> Joint Capsule Mobility & Core Integration</li>
+            <li><i class="ri-check-line"></i> Collaboration with Leading HK Physios</li>
+          </ul>
+
+          <button class="btn btn-secondary btn-block" onclick="openBookingModal()">Select Pathway</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TRAINER NETWORK (#PTHK COLLECTIVE)
+       ========================================================================== -->
+  <section class="network-section" id="network-section">
+    <div class="container">
+      <div class="network-grid">
+        <div class="reveal">
+          <span class="section-tag"><i class="ri-group-line"></i> #PTHK Community</span>
+          <h2 class="section-title">Are You a Top Personal Trainer in Hong Kong?</h2>
+          <p class="section-desc">
+            PTHK connects Hong Kong's most talented fitness professionals with high-tier private clients and top boutique fitness gyms.
+          </p>
+
+          <div class="network-perks-list">
+            <div class="perk-card">
+              <i class="ri-user-add-line"></i>
+              <h4>Qualified Leads</h4>
+              <p>Direct client referrals matching your coaching specialty.</p>
+            </div>
+            <div class="perk-card">
+              <i class="ri-building-line"></i>
+              <h4>Gym Access</h4>
+              <p>Train your clients in premium partner studios across Central & TST.</p>
+            </div>
+            <div class="perk-card">
+              <i class="ri-medal-line"></i>
+              <h4>Brand Authority</h4>
+              <p>Get featured on @personaltrainershk social channels.</p>
+            </div>
+            <div class="perk-card">
+              <i class="ri-line-chart-line"></i>
+              <h4>Career Growth</h4>
+              <p>Continuous education workshops and peer masterminds.</p>
+            </div>
+          </div>
+
+          <button class="btn btn-outline btn-lg" onclick="openTrainerJoinModal()">
+            <i class="ri-shield-user-line"></i> Apply to Join #PTHK Collective
+          </button>
+        </div>
+
+        <div class="reveal delay-1" style="position: relative;">
+          <img src="assets/images/trainer-alex.jpg" alt="Join PTHK Trainers Network" style="border-radius: var(--radius-lg); border: 1px solid var(--border-card); box-shadow: var(--shadow-card);">
+          <div style="position: absolute; bottom: -15px; right: -15px; background: var(--bg-surface-elevated); border: 1px solid var(--primary-orange); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--glow-box); max-width: 240px;">
+            <div style="font-family: var(--font-hero); font-weight: 700; font-size: 2.2rem; color: var(--primary-orange); line-height: 1;">50+ Coaches</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.3rem;">Growing Hong Kong's fittest community together.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INSTAGRAM FEED SHOWCASE (@personaltrainershk)
+       ========================================================================== -->
+  <section class="instagram-section" id="instagram-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="ri-instagram-line"></i> Follow @personaltrainershk</span>
+        <h2 class="section-title">Daily Training Insights & <span class="gradient-text">HK Fitness Life</span></h2>
+        <p class="section-desc">Join our growing community on Instagram for daily lifting cues, nutrition science, and client victories.</p>
+      </div>
+
+      <!-- Instagram Posts Grid (Rendered by app.js) -->
+      <div class="instagram-posts-grid" id="instagram-posts-grid">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="https://www.instagram.com/personaltrainershk/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          <i class="ri-instagram-fill"></i> View Official Instagram Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ ACCORDION SECTION
+       ========================================================================== -->
+  <section class="faq-section" id="faq-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag"><i class="ri-questionnaire-line"></i> Common Questions</span>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p class="section-desc">Everything you need to know about working with a PTHK certified personal trainer in Hong Kong.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active reveal">
+          <div class="faq-question">
+            <span>How does the PTHK personal trainer matchmaking work?</span>
+            <i class="ri-arrow-down-s-line faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            We analyze your specific physical goals (fat loss, muscle gain, posture rehab, boxing), preferred training location across Hong Kong (Central, Wan Chai, TST, Causeway Bay or In-Home), schedule, and coach personality style. We then pair you with our certified top 1% specialist coach who holds an unmatched track record in your exact objective.
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-1">
+          <div class="faq-question">
+            <span>Where do training sessions take place in Hong Kong?</span>
+            <i class="ri-arrow-down-s-line faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            We operate out of premier, private boutique fitness facilities and partner studios in Central, Wan Chai, TST, Mid-Levels, and Causeway Bay. We also offer in-home private training at luxury residential clubhouses and hybrid online coaching.
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-2">
+          <div class="faq-question">
+            <span>What qualifications do PTHK certified coaches hold?</span>
+            <i class="ri-arrow-down-s-line faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            Every coach in the PTHK collective is rigorously vetted. They hold internationally accredited certifications (NASM, CSCS, ACE, EXOS, Poliquin), minimum 5+ years of verified coaching experience, insured liability coverage, and CPR/AED certifications.
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-3">
+          <div class="faq-question">
+            <span>How are nutrition and meal plans handled?</span>
+            <i class="ri-arrow-down-s-line faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            No generic PDF templates. Your assigned coach designs a custom macronutrient and meal roadmap customized to your metabolic rate, lifestyle, whether you cook or eat at Hong Kong restaurants, and social commitments.
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-question">
+            <span>I am a personal trainer or gym owner in HK. How do I join the #PTHK Collective?</span>
+            <i class="ri-arrow-down-s-line faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            We actively welcome elite coaches and boutique fitness studios. Click 'Join as a Trainer' in the navigation bar to submit your credentials, portfolio, and transformation case studies for review by our admissions board.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col reveal">
+          <a href="#" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-icon-badge">PT</div>
+            <div class="logo-text-group">
+              <span class="brand-name">PTHK</span>
+              <span class="brand-sub">Hong Kong</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+            Hong Kong's premier fitness collective connecting high-achieving individuals with top-tier personal trainers, specialized rehab experts, and boutique studios.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://www.instagram.com/personaltrainershk/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="padding: 0.45rem 0.9rem;">
+              <i class="ri-instagram-fill"></i> @personaltrainershk
+            </a>
+            <a href="https://wa.me/85291234567" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" style="padding: 0.45rem 0.9rem;">
+              <i class="ri-whatsapp-fill"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col reveal delay-1">
+          <h4>Coaching Specialties</h4>
+          <ul class="footer-links-list">
+            <li><a href="#trainers-section">Strength & Hypertrophy</a></li>
+            <li><a href="#trainers-section">Executive Fat Loss</a></li>
+            <li><a href="#trainers-section">Boxing & Combat Conditioning</a></li>
+            <li><a href="#trainers-section">Desk Posture & Spine Rehab</a></li>
+            <li><a href="#trainers-section">Female Body Sculpting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col reveal delay-2">
+          <h4>Districts Served</h4>
+          <ul class="footer-links-list">
+            <li><a href="#trainers-section">Central & Soho Studios</a></li>
+            <li><a href="#trainers-section">Wan Chai & Causeway Bay</a></li>
+            <li><a href="#trainers-section">Tsim Sha Tsui (Kowloon)</a></li>
+            <li><a href="#trainers-section">Mid-Levels Private Gyms</a></li>
+            <li><a href="#trainers-section">In-Home & Clubhouse Training</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col reveal delay-3">
+          <h4>Concierge & Contact</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            <i class="ri-phone-line" style="color: var(--primary-orange);"></i> +852 9123 4567
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            <i class="ri-mail-line" style="color: var(--primary-orange);"></i> contact@personaltrainershk.com
+          </p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            <i class="ri-time-line" style="color: var(--primary-orange);"></i> Mon-Sun: 06:00 - 22:00 HKT
+          </p>
+          <button class="btn btn-primary btn-block btn-sm" onclick="openBookingModal()">
+            Schedule Free Consultation
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 PTHK | Personal Trainers Hong Kong. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-muted);">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted);">Terms of Service</a>
+          <a href="#" style="color: var(--text-muted);">Trainer Code of Ethics</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING QUICK ACTION DOCK (Phone & Desktop)
+       ========================================================================== -->
+  <div class="floating-action-bar">
+    <a href="https://wa.me/85291234567?text=Hi%20PTHK%20Team!%20I%20would%20like%20to%20inquire%20about%20personal%20training%20in%20Hong%20Kong." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" title="Chat on WhatsApp">
+      <i class="ri-whatsapp-fill"></i> Fast Chat
+    </a>
+    <button class="btn btn-primary" onclick="openBookingModal()" title="Book Free Fitness Consultation">
+      <i class="ri-calendar-event-fill"></i> Free Assessment
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: CONSULTATION BOOKING
+       ========================================================================== -->
+  <div class="modal-wrapper" id="booking-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close modal"><i class="ri-close-line"></i></button>
+
+      <span class="section-tag"><i class="ri-calendar-check-fill"></i> 100% Free 1-on-1 Consultation</span>
+      <h3 style="font-size: 1.6rem; margin: 0.5rem 0 0.5rem; font-weight: 800;">Book Your Fitness Assessment</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        Complete this short form to connect directly with our head coaching concierge via WhatsApp.
+      </p>
+
+      <form id="booking-form">
+        <div class="form-group">
+          <label class="form-label" for="book-name">Your Full Name</label>
+          <input type="text" id="book-name" class="form-input" placeholder="e.g. Alex Wong" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="book-phone">WhatsApp / Phone Number</label>
+          <input type="tel" id="book-phone" class="form-input" placeholder="e.g. +852 9123 4567" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="book-trainer-select">Preferred Coach</label>
+          <select id="book-trainer-select" class="form-select">
+            <option value="Best Match (Auto-assign)">Auto-Assign Best Specialist Coach</option>
+            <option value="marcus-vance">Marcus Vance (Strength & Hypertrophy)</option>
+            <option value="sarah-chen">Sarah Chen (Fat Loss & Glute Sculpt)</option>
+            <option value="alex-reyes">Alex Reyes (Boxing & Conditioning)</option>
+            <option value="kenji-tanaka">Kenji Tanaka (Posture & Sports Rehab)</option>
+            <option value="elena-koval">Elena Koval (HIIT & Rapid Recomp)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="book-goal">Primary Goal</label>
+            <select id="book-goal" class="form-select">
+              <option value="Fat Loss & Shred">Fat Loss & Shred</option>
+              <option value="Muscle Hypertrophy">Muscle Hypertrophy</option>
+              <option value="Boxing / Fight Conditioning">Boxing / Combat</option>
+              <option value="Posture & Rehab">Posture & Rehab</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="book-location">Preferred Location</label>
+            <select id="book-location" class="form-select">
+              <option value="Central">Central Studio</option>
+              <option value="Wan Chai">Wan Chai</option>
+              <option value="TST">Tsim Sha Tsui</option>
+              <option value="Causeway Bay">Causeway Bay</option>
+              <option value="Private Home / Online">Private Home / Online</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="book-date">Preferred Consultation Date</label>
+          <input type="date" id="book-date" class="form-input" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+          <i class="ri-whatsapp-fill"></i> Connect via WhatsApp Concierge
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: TRAINER JOIN APPLICATION (#PTHK COLLECTIVE)
+       ========================================================================== -->
+  <div class="modal-wrapper" id="trainer-join-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close modal"><i class="ri-close-line"></i></button>
+
+      <span class="section-tag"><i class="ri-medal-fill"></i> Coach Accreditation</span>
+      <h3 style="font-size: 1.6rem; margin: 0.5rem 0 0.5rem; font-weight: 800;">Join the #PTHK Collective</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        Apply to become an accredited trainer or partner gym in Hong Kong.
+      </p>
+
+      <form id="trainer-join-form">
+        <div class="form-group">
+          <label class="form-label" for="coach-name">Trainer / Studio Name</label>
+          <input type="text" id="coach-name" class="form-input" placeholder="e.g. Jason Lau" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="coach-phone">Contact Phone / WhatsApp</label>
+          <input type="tel" id="coach-phone" class="form-input" placeholder="+852 ..." required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="coach-certs">Accreditations & Certifications</label>
+          <input type="text" id="coach-certs" class="form-input" placeholder="e.g. NASM-CPT, CSCS, ACE, FMS" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="coach-exp">Years of Experience</label>
+          <select id="coach-exp" class="form-select">
+            <option value="3-5 years">3 - 5 Years</option>
+            <option value="5-10 years">5 - 10 Years</option>
+            <option value="10+ years">10+ Years Master Trainer</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="coach-ig">Instagram Handle / Portfolio</label>
+          <input type="text" id="coach-ig" class="form-input" placeholder="@yourhandle">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+          <i class="ri-send-plane-fill"></i> Submit Trainer Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/trainers-data.js"></script>
+  <script src="js/calculators.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
